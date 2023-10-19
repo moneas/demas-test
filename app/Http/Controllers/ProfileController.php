@@ -8,6 +8,8 @@ class ProfileController extends Controller
 {
     public function show()
     {
+        $user = auth()->user();
+        return view('auth.profile', compact('user'));
         return view('auth.profile');
     }
 
